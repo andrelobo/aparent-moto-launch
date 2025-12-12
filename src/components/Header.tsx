@@ -1,0 +1,126 @@
+import { useState } from "react";
+import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/ThemeProvider";
+import logoBlack from "@/assets/logo-black.png";
+import logoWhite from "@/assets/logo-white.png";
+
+const navItems = [
+  { label: "Início", href: "#inicio" },
+  { label: "Motos", href: "#motos" },
+  { label: "Planos", href: "#planos" },
+  { label: "Como Funciona", href: "#como-funciona" },
+  { label: "Contato", href: "#contato" },
+];
+
+export function Header() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { theme, setTheme } = useTheme();
+
+  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+
+  const toggleTheme = () => {
+    setTheme(isDark ? "light" : "dark");
+  };
+
+  const scrollToSection = (href: string) => {
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+    setIsMenuOpen(false);
+  };
+
+  return (
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md border-b border-border">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 md:h-20">
+          {/* Logo */}
+          <a href="#inicio" className="flex-shrink-0">
+            <img
+              src={isDark ? logoWhite : logoBlack}
+              alt="ApaRent - Locadora de Motos"
+              className="h-10 md:h-12 w-auto"
+            />
+          </a>
+
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navItems.map((item) => (
+              <button
+                key={item.href}
+                onClick={() => scrollToSection(item.href)}
+                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              >
+                {item.label}
+              </button>
+            ))}
+          </nav>
+
+          {/* Actions */}
+          <div className="flex items-center gap-2 md:gap-4">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="rounded-full"
+            >
+              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+            </Button>
+
+            <a
+              href="https://wa.me/5592999999999"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:flex"
+            >
+              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
+                <MessageCircle className="h-4 w-4" />
+                <span className="hidden lg:inline">Fale no WhatsApp</span>
+                <span className="lg:hidden">WhatsApp</span>
+              </Button>
+            </a>
+
+            {/* Mobile Menu Toggle */}
+            <Button
+              variant="ghost"
+              size="icon"
+              className="md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            </Button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-border animate-fade-in">
+            <nav className="flex flex-col gap-2">
+              {navItems.map((item) => (
+                <button
+                  key={item.href}
+                  onClick={() => scrollToSection(item.href)}
+                  className="text-left py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                >
+                  {item.label}
+                </button>
+              ))}
+              <a
+                href="https://wa.me/5592999999999"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-2"
+              >
+                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
+                  <MessageCircle className="h-4 w-4" />
+                  Fale no WhatsApp
+                </Button>
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+}

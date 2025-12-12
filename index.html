@@ -1,24 +1,61 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- TODO: Set the document title to the name of your application -->
-    <title>Lovable App</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
-
-    <!-- TODO: Update og:title to match your application name -->
-    <meta property="og:title" content="Lovable App" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    
+    <!-- SEO Meta Tags -->
+    <title>ApaRent | Locadora de Motos em Manaus - Aluguel Rápido e Seguro</title>
+    <meta name="description" content="Locadora de motos em Manaus. Alugue motos Honda CG 160 com documentação em dia, manutenção inclusa e atendimento ágil. Ideal para entregadores e mobilidade urbana." />
+    <meta name="keywords" content="locadora de motos manaus, aluguel de moto manaus, locação de moto amazonas, moto para delivery, honda cg 160, aluguel moto" />
+    <meta name="author" content="ApaRent - Locadora de Motos" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@Lovable" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:url" content="https://aparent.com.br/" />
+    <meta property="og:title" content="ApaRent | Locadora de Motos em Manaus" />
+    <meta property="og:description" content="Alugue motos Honda em Manaus com documentação em dia e manutenção inclusa. Processo rápido e sem burocracia." />
+    <meta property="og:image" content="/og-image.jpg" />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://aparent.com.br/" />
+    <meta property="twitter:title" content="ApaRent | Locadora de Motos em Manaus" />
+    <meta property="twitter:description" content="Alugue motos Honda em Manaus com documentação em dia e manutenção inclusa." />
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://aparent.com.br/" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "ApaRent - Locadora de Motos",
+      "description": "Locadora de motos em Manaus. Aluguel de motos Honda CG 160 com documentação em dia e manutenção inclusa.",
+      "url": "https://aparent.com.br",
+      "telephone": "+55-92-99999-9999",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Manaus",
+        "addressRegion": "AM",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "-3.1190275",
+        "longitude": "-60.0217314"
+      },
+      "openingHours": "Mo-Sa 08:00-18:00",
+      "priceRange": "$$",
+      "image": "/og-image.jpg"
+    }
+    </script>
   </head>
-
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
