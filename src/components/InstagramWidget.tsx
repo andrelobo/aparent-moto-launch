@@ -2,7 +2,7 @@ import { Instagram } from "lucide-react";
 
 export function InstagramWidget() {
   return (
-    <div className="fixed bottom-6 left-6 z-50">
+    <div className="fixed bottom-24 right-6 z-50">
       {/* Float Button */}
       <a
         href="https://instagram.com/aparent"
