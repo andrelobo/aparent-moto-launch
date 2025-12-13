@@ -74,7 +74,7 @@ export function HeroSection() {
                 </Button>
               </a>
               <a href="#motos">
-                <Button size="lg" variant="outline" className="border-background text-background hover:bg-background hover:text-foreground text-lg px-8">
+                <Button size="lg" variant="outline" className="border-background bg-transparent text-background hover:bg-background hover:text-foreground text-lg px-8">
                   Ver motos disponíveis
                 </Button>
               </a>

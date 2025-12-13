@@ -50,6 +50,7 @@
     --gray-medium: 0 0% 70%;
     --gray-dark: 0 0% 30%;
     --whatsapp: 142 70% 45%;
+    --whatsapp-foreground: 0 0% 100%;
   }
 
   .dark {
