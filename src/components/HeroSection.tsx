@@ -4,6 +4,7 @@ import heroCouple from "@/assets/hero-couple.png";
 import motoAzul from "@/assets/motos/honda-fan-azul.png";
 import motoCinza from "@/assets/motos/honda-titan-cinza.png";
 import motoVermelha from "@/assets/motos/honda-start-vermelha.png";
+import parceiros from "@/assets/parceiros.png";
 
 export function HeroSection() {
   return (
@@ -17,24 +18,15 @@ export function HeroSection() {
               {/* Left Side - Couple + Text */}
               <div className="relative flex flex-col items-start">
                 <div className="relative z-10 mb-6">
-                  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
-                    Alugue sua moto.
-                  </h1>
+                  
                   <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
                     Conquiste seus sonhos.
                   </h1>
-                 
+                 <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
+                    Alugue sua moto.
+                  </h1>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <a
-                      href="https://wa.me/5592999999999?text=Olá! Gostaria de alugar uma moto."
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 text-lg px-8">
-                        <MessageCircle className="h-5 w-5" />
-                        Alugue agora pelo WhatsApp
-                      </Button>
-                    </a>
+                    <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-md" />
                     <a href="#motos">
                       <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 invisible">
                         Ver motos disponíveis
@@ -91,17 +83,7 @@ export function HeroSection() {
               Liberdade para rodar pela cidade com economia e praticidade
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-              <a
-                href="https://wa.me/5592999999999?text=Olá! Gostaria de alugar uma moto."
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mx-auto"
-              >
-                <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 w-full sm:w-auto">
-                  <MessageCircle className="h-5 w-5" />
-                  Alugue pelo WhatsApp
-                </Button>
-              </a>
+              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-xs mx-auto" />
               <a href="#motos">
                 <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black w-full sm:w-auto invisible">
                   Ver motos
