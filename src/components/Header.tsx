@@ -111,7 +111,7 @@ export function Header() {
               >
                 <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
                   <MessageCircle className="h-4 w-4" />
-                  Fale no WhatsApp
+                  Alugue agora
                 </Button>
               </a>
             </nav>

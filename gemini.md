@@ -55,3 +55,23 @@ The application uses TanStack Query (React Query) for managing server state (dat
 ## Linting and Formatting
 
 The project uses ESLint for linting. The configuration is in `eslint.config.js`.
+
+## Recent Changes (HeroSection.tsx)
+
+The `HeroSection.tsx` component has undergone several layout and styling adjustments to meet specific visual requirements:
+
+-   **Motorcycle Image Sizing:**
+    -   **Desktop:** The motorcycle images have been resized multiple times to achieve the desired visual balance. The final size is controlled by `max-w-[340px]` on each image and a container height of `h-[340px] xl:h-[395px]`.
+    -   **Mobile:** The `honda-start-vermelha.png` and `honda-titan-cinza.png` images have been scaled up using `scale-125` to visually match the `honda-fan-azul.png`.
+
+-   **Motorcycle Image Positioning:**
+    -   **Desktop:** The images are now vertically aligned to the bottom of their container using the `items-end` class. The horizontal spacing between them has been reduced by changing `gap-4` to `gap-2`.
+
+-   **"Ver motos" Button:**
+    -   The "Ver motos disponíveis" button has been made invisible across all viewports (desktop and mobile) by applying the `invisible` Tailwind CSS class. It remains in the DOM but is not rendered.
+
+-   **Hero Text:**
+    -   The `whitespace-nowrap` class was removed from the main heading and paragraph to allow the text to wrap naturally on smaller screens, preventing overflow and text from being cut off.
+
+-   **`hero-couple.png` Image:**
+    -   The size of the `hero-couple.png` image has been significantly increased on mobile viewports to `w-96 sm:w-[512px]` for better visual impact.
