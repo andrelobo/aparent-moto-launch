@@ -17,13 +17,13 @@ export function HeroSection() {
               {/* Left Side - Couple + Text */}
               <div className="relative flex flex-col items-start">
                 <div className="relative z-10 mb-6">
-                  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
+                  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight whitespace-nowrap">
                     Alugue sua moto em Manaus
                   </h1>
-                  <p className="text-lg xl:text-xl text-white/90 mb-6 max-w-md">
+                  <p className="text-lg xl:text-xl text-white/90 mb-6 whitespace-nowrap">
                     Liberdade para rodar pela cidade com economia e praticidade
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4">
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="https://wa.me/5592999999999?text=Olá! Gostaria de alugar uma moto."
                       target="_blank"
@@ -35,7 +35,7 @@ export function HeroSection() {
                       </Button>
                     </a>
                     <a href="#motos">
-                      <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8">
+                      <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 invisible">
                         Ver motos disponíveis
                       </Button>
                     </a>
@@ -51,26 +51,26 @@ export function HeroSection() {
 
               {/* Right Side - Motorcycles */}
               <div className="relative flex items-center justify-center h-full">
-                <div className="relative w-full h-[500px] xl:h-[600px]">
-                  {/* Moto Azul - Top Left */}
+                <div className="relative w-full flex justify-center items-end gap-2 h-[500px] xl:h-[600px]">
+                  {/* Moto Azul */}
                   <img 
                     src={motoAzul} 
                     alt="Honda Fan Azul" 
-                    className="absolute top-0 left-0 w-[55%] object-contain drop-shadow-2xl animate-slide-in"
+                    className="w-1/3 max-w-[200px] h-full object-contain drop-shadow-2xl animate-slide-in"
                     style={{ animationDelay: '0.1s' }}
                   />
-                  {/* Moto Cinza - Top Right */}
-                  <img 
-                    src={motoCinza} 
-                    alt="Honda Titan Cinza" 
-                    className="absolute top-4 right-0 w-[55%] object-contain drop-shadow-2xl animate-slide-in"
-                    style={{ animationDelay: '0.2s' }}
-                  />
-                  {/* Moto Vermelha - Bottom Center */}
+                  {/* Moto Vermelha */}
                   <img 
                     src={motoVermelha} 
                     alt="Honda Start Vermelha" 
-                    className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60%] object-contain drop-shadow-2xl animate-slide-in"
+                    className="w-1/3 max-w-[250px] h-full object-contain drop-shadow-2xl animate-slide-in"
+                    style={{ animationDelay: '0.2s' }}
+                  />
+                  {/* Moto Cinza */}
+                  <img 
+                    src={motoCinza} 
+                    alt="Honda Titan Cinza" 
+                    className="w-1/3 max-w-[250px] h-full object-contain drop-shadow-2xl animate-slide-in"
                     style={{ animationDelay: '0.3s' }}
                   />
                 </div>
@@ -83,10 +83,10 @@ export function HeroSection() {
         <div className="flex lg:hidden flex-col flex-1">
           {/* Text Content */}
           <div className="container mx-auto px-4 pt-8 text-center">
-            <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4 leading-tight animate-slide-in">
+            <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4 leading-tight animate-slide-in whitespace-nowrap">
               Alugue sua moto em Manaus
             </h1>
-            <p className="text-base sm:text-lg text-white/90 mb-6 max-w-md mx-auto">
+            <p className="text-base sm:text-lg text-white/90 mb-6 mx-auto whitespace-nowrap">
               Liberdade para rodar pela cidade com economia e praticidade
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
@@ -94,6 +94,7 @@ export function HeroSection() {
                 href="https://wa.me/5592999999999?text=Olá! Gostaria de alugar uma moto."
                 target="_blank"
                 rel="noopener noreferrer"
+                className="mx-auto"
               >
                 <Button size="lg" className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 w-full sm:w-auto">
                   <MessageCircle className="h-5 w-5" />
@@ -101,7 +102,7 @@ export function HeroSection() {
                 </Button>
               </a>
               <a href="#motos">
-                <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black w-full sm:w-auto invisible">
                   Ver motos
                 </Button>
               </a>
@@ -118,24 +119,27 @@ export function HeroSection() {
           </div>
 
           {/* Motorcycles Grid - Mobile */}
-          <div className="flex-1 container mx-auto px-4 pb-8">
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 items-end h-full max-h-[300px]">
+          <div className="flex-1 container mx-auto px-4 pb-8 flex justify-center items-end h-[200px]">
+            <div className="grid grid-cols-3 gap-1 sm:gap-2 w-full max-w-lg">
+              {/* Moto Azul */}
               <img 
                 src={motoAzul} 
                 alt="Honda Fan Azul" 
-                className="w-full object-contain drop-shadow-lg animate-slide-in"
+                className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
                 style={{ animationDelay: '0.1s' }}
               />
+              {/* Moto Vermelha */}
               <img 
                 src={motoVermelha} 
                 alt="Honda Start Vermelha" 
-                className="w-full object-contain drop-shadow-lg animate-slide-in"
+                className="w-full h-full object-contain drop-shadow-lg animate-slide-in scale-125"
                 style={{ animationDelay: '0.2s' }}
               />
+              {/* Moto Cinza */}
               <img 
                 src={motoCinza} 
                 alt="Honda Titan Cinza" 
-                className="w-full object-contain drop-shadow-lg animate-slide-in"
+                className="w-full h-full object-contain drop-shadow-lg animate-slide-in scale-125"
                 style={{ animationDelay: '0.3s' }}
               />
             </div>
