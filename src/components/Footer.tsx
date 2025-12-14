@@ -19,7 +19,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-xs">
-            © {new Date().getFullYear()} ApaRent
+            @2025 - Desenvolvido com ❤ por Na Tora Agência Digital
           </p>
         </div>
       </div>
