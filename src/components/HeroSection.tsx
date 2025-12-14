@@ -18,11 +18,12 @@ export function HeroSection() {
               <div className="relative flex flex-col items-start">
                 <div className="relative z-10 mb-6">
                   <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
-                    Alugue sua moto em Manaus
+                    Alugue sua moto.
                   </h1>
-                  <p className="text-lg xl:text-xl text-white/90 mb-6">
-                    Liberdade para rodar pela cidade com economia e praticidade
-                  </p>
+                  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
+                    Conquiste seus sonhos.
+                  </h1>
+                 
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <a
                       href="https://wa.me/5592999999999?text=Olá! Gostaria de alugar uma moto."
