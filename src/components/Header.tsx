@@ -6,8 +6,9 @@ import logoBlack from "@/assets/logo-black.png";
 import logoWhite from "@/assets/logo-white.png";
 
 const navItems = [
-  { label: "Início", href: "#inicio" },
-  { label: "Planos", href: "#planos" },
+  { label: "Aplicativo", href: "#" },
+  { label: "Empresa", href: "#" },
+  { label: "Aventureiro", href: "#" },
 ];
 
 export function Header() {
@@ -21,6 +22,11 @@ export function Header() {
   };
 
   const scrollToSection = (href: string) => {
+    // For links with href="#", prevent default scroll behavior
+    if (href === "#") {
+      setIsMenuOpen(false);
+      return;
+    }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -45,9 +51,9 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <button
-                key={item.href}
+                key={item.label} // Changed key to item.label as href is now always "#"
                 onClick={() => scrollToSection(item.href)}
-                className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </button>
@@ -71,9 +77,9 @@ export function Header() {
               rel="noopener noreferrer"
               className="hidden sm:flex"
             >
-              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
+              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 animate-blink">
                 <MessageCircle className="h-4 w-4" />
-                <span className="hidden lg:inline">Fale no WhatsApp</span>
+                <span className="hidden lg:inline">Alugue Agora</span>
                 <span className="lg:hidden">WhatsApp</span>
               </Button>
             </a>
@@ -96,9 +102,9 @@ export function Header() {
             <nav className="flex flex-col gap-2">
               {navItems.map((item) => (
                 <button
-                  key={item.href}
+                  key={item.label} // Changed key to item.label as href is now always "#"
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 px-4 text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="text-left py-3 px-4 text-base text-foreground hover:bg-secondary rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
@@ -109,9 +115,9 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="mt-2"
               >
-                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
+                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 animate-blink">
                   <MessageCircle className="h-4 w-4" />
-                  Alugue agora
+                  Alugue Agora
                 </Button>
               </a>
             </nav>
