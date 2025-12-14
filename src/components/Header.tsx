@@ -7,10 +7,7 @@ import logoWhite from "@/assets/logo-white.png";
 
 const navItems = [
   { label: "Início", href: "#inicio" },
-  { label: "Motos", href: "#motos" },
   { label: "Planos", href: "#planos" },
-  { label: "Como Funciona", href: "#como-funciona" },
-  { label: "Contato", href: "#contato" },
 ];
 
 export function Header() {
