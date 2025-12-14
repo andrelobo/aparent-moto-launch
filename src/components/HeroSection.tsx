@@ -1,19 +1,11 @@
 import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero01.png";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative h-screen min-h-[600px] pt-16 md:pt-20">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <div className="absolute inset-0 bg-foreground/40 z-10" />
-        <img
-          src={heroImage}
-          alt="Aluguel de motos em Manaus - ApaRent"
-          className="w-full h-full object-cover"
-        />
-      </div>
+    <section id="inicio" className="relative h-screen min-h-[600px] pt-16 md:pt-20 bg-black">
+      {/* Black Background */}
+      <div className="absolute inset-0 bg-black" />
 
       {/* Content */}
       <div className="relative z-20 h-full flex items-center">
