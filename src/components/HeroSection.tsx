@@ -24,7 +24,7 @@ export function HeroSection() {
                     Alugue sua moto.
                   </h1>
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-md" />
+                    <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[336px]" />
                     <a href="#motos">
                       <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 invisible">
                         Ver motos disponíveis
@@ -79,7 +79,7 @@ export function HeroSection() {
               Alugue sua moto.
             </h1>
             <div className="flex flex-col sm:flex-row gap-3 justify-start mb-8">
-              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-xs" />
+              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[180px]" />
               <a href="#motos">
                 <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black w-full sm:w-auto invisible">
                   Ver motos
