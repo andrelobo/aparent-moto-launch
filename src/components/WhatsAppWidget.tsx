@@ -53,7 +53,7 @@ export function WhatsAppWidget() {
       {/* Float Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="w-14 h-14 bg-whatsapp hover:bg-whatsapp/90 rounded-full flex items-center justify-center text-primary-foreground shadow-lg hover:shadow-xl transition-all hover:scale-110 animate-pulse-soft"
+        className="w-14 h-14 bg-whatsapp hover:bg-whatsapp/90 rounded-full flex items-center justify-center text-primary-foreground shadow-lg hover:shadow-xl transition-all hover:scale-110 animate-blink"
         aria-label="Abrir WhatsApp"
       >
         {isOpen ? (

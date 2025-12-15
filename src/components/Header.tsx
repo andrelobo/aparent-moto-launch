@@ -77,7 +77,7 @@ export function Header() {
               rel="noopener noreferrer"
               className="hidden sm:flex"
             >
-              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 animate-blink">
+              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
                 <MessageCircle className="h-4 w-4" />
                 <span className="hidden lg:inline">Alugue Agora</span>
                 <span className="lg:hidden">WhatsApp</span>
@@ -115,7 +115,7 @@ export function Header() {
                 rel="noopener noreferrer"
                 className="mt-2"
               >
-                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2 animate-blink">
+                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
                   <MessageCircle className="h-4 w-4" />
                   Alugue Agora
                 </Button>
