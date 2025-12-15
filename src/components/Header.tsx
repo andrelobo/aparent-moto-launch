@@ -45,12 +45,12 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="flex items-center gap-4 ml-auto">
+          <nav className="flex items-center gap-2 md:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.label} // Changed key to item.label as href is now always "#"
                 onClick={() => scrollToSection(item.href)}
-                className="text-[8px] font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-[8px] md:text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </button>
