@@ -12,7 +12,6 @@ const navItems = [
 ];
 
 export function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, setTheme } = useTheme();
 
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
@@ -24,14 +23,12 @@ export function Header() {
   const scrollToSection = (href: string) => {
     // For links with href="#", prevent default scroll behavior
     if (href === "#") {
-      setIsMenuOpen(false);
       return;
     }
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
-    setIsMenuOpen(false);
   };
 
   return (
@@ -48,12 +45,12 @@ export function Header() {
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="flex items-center gap-4 ml-auto">
             {navItems.map((item) => (
               <button
                 key={item.label} // Changed key to item.label as href is now always "#"
                 onClick={() => scrollToSection(item.href)}
-                className="text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+                className="text-[8px] font-medium text-muted-foreground hover:text-foreground transition-colors"
               >
                 {item.label}
               </button>
@@ -88,41 +85,12 @@ export function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="hidden"
             >
-              {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+              <Menu className="h-6 w-6" />
             </Button>
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-2 px-4">
-              {navItems.map((item) => (
-                <button
-                  key={item.label} // Changed key to item.label as href is now always "#"
-                  onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 text-base text-foreground hover:bg-secondary rounded-lg transition-colors"
-                >
-                  {item.label}
-                </button>
-              ))}
-              <a
-                href="https://wa.me/5592999999999"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-2"
-              >
-                <Button className="w-full bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
-                  <MessageCircle className="h-4 w-4" />
-                  Alugue Agora
-                </Button>
-              </a>
-            </nav>
-          </div>
-        )}
       </div>
     </header>
   );
