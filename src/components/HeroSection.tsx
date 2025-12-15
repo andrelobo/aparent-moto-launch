@@ -73,13 +73,13 @@ export function HeroSection() {
         {/* Mobile/Tablet Layout */}
         <div className="flex lg:hidden flex-col flex-1">
           {/* Text Content */}
-          <div className="container mx-auto px-4 pt-8 text-center">
+          <div className="container mx-auto px-4 pt-8 text-left">
             <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4 leading-tight animate-slide-in">
               Conquiste seus sonhos.<br />
               Alugue sua moto.
             </h1>
-            <div className="flex flex-col sm:flex-row gap-3 justify-center mb-8">
-              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-xs mx-auto" />
+            <div className="flex flex-col sm:flex-row gap-3 justify-start mb-8">
+              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-xs" />
               <a href="#motos">
                 <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black w-full sm:w-auto invisible">
                   Ver motos
@@ -89,7 +89,7 @@ export function HeroSection() {
           </div>
 
           {/* Couple Image - Mobile */}
-          <div className="flex justify-center px-4 mb-6">
+          <div className="flex justify-start px-4 mb-6">
             <img 
               src={heroCouple} 
               alt="Casal de motociclistas felizes" 

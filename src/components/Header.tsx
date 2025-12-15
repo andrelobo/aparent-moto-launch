@@ -99,12 +99,12 @@ export function Header() {
         {/* Mobile Navigation */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-2">
+            <nav className="flex flex-col gap-2 px-4">
               {navItems.map((item) => (
                 <button
                   key={item.label} // Changed key to item.label as href is now always "#"
                   onClick={() => scrollToSection(item.href)}
-                  className="text-left py-3 px-4 text-base text-foreground hover:bg-secondary rounded-lg transition-colors"
+                  className="text-left py-3 text-base text-foreground hover:bg-secondary rounded-lg transition-colors"
                 >
                   {item.label}
                 </button>
