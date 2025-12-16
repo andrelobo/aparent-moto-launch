@@ -42,26 +42,26 @@ export function HeroSection() {
 
               {/* Right Side - Motorcycles */}
               <div className="relative flex items-center justify-center h-full">
-                <div className="relative w-full flex justify-center items-end gap-2 h-[400px] xl:h-[450px]">
+                <div className="relative w-full flex justify-center items-end h-[400px] xl:h-[450px]">
                   {/* Moto Azul */}
                   <img 
                     src={motoAzul} 
                     alt="Honda Fan Azul" 
-                    className="max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
+                    className="relative z-20 -mr-48 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
                     style={{ animationDelay: '0.1s' }}
                   />
                   {/* Moto Vermelha */}
                   <img 
                     src={motoVermelha} 
                     alt="Honda Start Vermelha" 
-                    className="max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
+                    className="relative z-30 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
                     style={{ animationDelay: '0.2s' }}
                   />
                   {/* Moto Cinza */}
                   <img 
                     src={motoCinza} 
                     alt="Honda Titan Cinza" 
-                    className="max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
+                    className="relative z-10 -ml-48 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
                     style={{ animationDelay: '0.3s' }}
                   />
                 </div>
@@ -99,26 +99,26 @@ export function HeroSection() {
 
           {/* Motorcycles Grid - Mobile */}
           <div className="flex-1 container mx-auto px-4 pb-8 flex justify-center items-end h-[200px]">
-            <div className="grid grid-cols-3 gap-1 sm:gap-2 w-full max-w-lg">
+            <div className="flex justify-center items-end w-full max-w-lg">
               {/* Moto Azul */}
               <img 
                 src={motoAzul} 
                 alt="Honda Fan Azul" 
-                className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
+                className="relative z-20 -mr-16 w-full h-full object-contain drop-shadow-lg animate-slide-in"
                 style={{ animationDelay: '0.1s' }}
               />
               {/* Moto Vermelha */}
               <img 
                 src={motoVermelha} 
                 alt="Honda Start Vermelha" 
-                className="w-full h-full object-contain drop-shadow-lg animate-slide-in scale-125"
+                className="relative z-30 w-full h-full object-contain drop-shadow-lg animate-slide-in"
                 style={{ animationDelay: '0.2s' }}
               />
               {/* Moto Cinza */}
               <img 
                 src={motoCinza} 
                 alt="Honda Titan Cinza" 
-                className="w-full h-full object-contain drop-shadow-lg animate-slide-in scale-125"
+                className="relative z-10 -ml-16 w-full h-full object-contain drop-shadow-lg animate-slide-in"
                 style={{ animationDelay: '0.3s' }}
               />
             </div>
