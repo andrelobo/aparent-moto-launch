@@ -1,70 +1,45 @@
-import { MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroCouple from "@/assets/hero-couple.png";
-import motoAzul from "@/assets/motos/honda-fan-azul.png";
-import motoCinza from "@/assets/motos/honda-titan-cinza.png";
-import motoVermelha from "@/assets/motos/honda-start-vermelha.png";
+import motoqueiroHero1 from "@/assets/motos/motoqueiro_hero1.png";
+import testeHero1 from "@/assets/testeHero1.png";
 import parceiros from "@/assets/parceiros.png";
 
 export function HeroSection() {
   return (
     <section id="inicio" className="relative min-h-screen bg-black pt-16 md:pt-20 overflow-hidden">
       {/* Content Container */}
-      <div className="relative z-10 h-full min-h-[calc(100vh-4rem)] flex flex-col">
+      <div className="relative z-10 h-full min-h-[calc(100vh-4rem)] flex flex-col justify-center">
+        
         {/* Desktop Layout */}
-        <div className="hidden lg:flex flex-1 items-center">
+        <div className="hidden lg:flex flex-col justify-center">
           <div className="container mx-auto px-4">
+            {/* Text Content Block */}
+            <div className="text-left mb-8">
+              <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
+                Conquiste seus sonhos.<br />
+                Alugue sua moto.
+              </h1>
+              <div className="flex justify-start">
+                <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[336px]" />
+              </div>
+            </div>
+
+            {/* Image Content Block */}
             <div className="grid grid-cols-2 gap-8 items-center">
-              {/* Left Side - Couple + Text */}
-              <div className="relative flex flex-col items-start">
-                <div className="relative z-10 mb-6">
-                  
-                  <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
-                    Conquiste seus sonhos.<br />
-                    Alugue sua moto.
-                  </h1>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[336px]" />
-                    <a href="#motos">
-                      <Button size="lg" variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-black text-lg px-8 invisible">
-                        Ver motos disponíveis
-                      </Button>
-                    </a>
-                  </div>
-                </div>
-                {/* Couple Image */}
+              {/* Left Side - Motoqueiro Image */}
+              <div className="relative flex items-center justify-start h-full force-align-left">
                 <img 
-                  src={heroCouple} 
-                  alt="Casal de motociclistas felizes" 
-                  className="w-full max-w-md xl:max-w-lg object-contain animate-fade-in"
+                  src={motoqueiroHero1} 
+                  alt="Motoqueiro" 
+                  className="max-w-[550px] h-full object-contain"
                 />
               </div>
-
               {/* Right Side - Motorcycles */}
-              <div className="relative flex items-center justify-center h-full">
-                <div className="relative w-full flex justify-center items-end h-[400px] xl:h-[450px]">
-                  {/* Moto Azul */}
-                  <img 
-                    src={motoAzul} 
-                    alt="Honda Fan Azul" 
-                    className="relative z-20 -mr-48 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
-                    style={{ animationDelay: '0.1s' }}
-                  />
-                  {/* Moto Vermelha */}
-                  <img 
-                    src={motoVermelha} 
-                    alt="Honda Start Vermelha" 
-                    className="relative z-30 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
-                    style={{ animationDelay: '0.2s' }}
-                  />
-                  {/* Moto Cinza */}
-                  <img 
-                    src={motoCinza} 
-                    alt="Honda Titan Cinza" 
-                    className="relative z-10 -ml-48 max-w-[340px] h-full object-contain drop-shadow-2xl animate-slide-in"
-                    style={{ animationDelay: '0.3s' }}
-                  />
-                </div>
+              <div className="relative flex items-center justify-end h-full">
+                <img 
+                  src={testeHero1} 
+                  alt="Motos" 
+                  className="max-w-[550px] h-full object-contain drop-shadow-2xl animate-slide-in"
+                />
               </div>
             </div>
           </div>
@@ -88,38 +63,22 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Couple Image - Mobile */}
+          {/* Motoqueiro Image - Mobile */}
           <div className="flex justify-start px-4 mb-6">
             <img 
-              src={heroCouple} 
-              alt="Casal de motociclistas felizes" 
+              src={motoqueiroHero1} 
+              alt="Motoqueiro" 
               className="w-96 sm:w-[512px] object-contain animate-fade-in"
             />
           </div>
 
           {/* Motorcycles Grid - Mobile */}
-          <div className="flex-1 container mx-auto px-4 pb-8 flex justify-center items-end h-[200px]">
-            <div className="flex justify-center items-end w-full max-w-lg">
-              {/* Moto Azul */}
+          <div className="flex-1 container mx-auto px-4 pb-8 flex justify-end items-end h-[200px]">
+            <div className="flex justify-end items-end w-full max-w-lg">
               <img 
-                src={motoAzul} 
-                alt="Honda Fan Azul" 
-                className="relative z-20 -mr-16 w-full h-full object-contain drop-shadow-lg animate-slide-in"
-                style={{ animationDelay: '0.1s' }}
-              />
-              {/* Moto Vermelha */}
-              <img 
-                src={motoVermelha} 
-                alt="Honda Start Vermelha" 
-                className="relative z-30 w-full h-full object-contain drop-shadow-lg animate-slide-in"
-                style={{ animationDelay: '0.2s' }}
-              />
-              {/* Moto Cinza */}
-              <img 
-                src={motoCinza} 
-                alt="Honda Titan Cinza" 
-                className="relative z-10 -ml-16 w-full h-full object-contain drop-shadow-lg animate-slide-in"
-                style={{ animationDelay: '0.3s' }}
+                src={testeHero1} 
+                alt="Motos" 
+                className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
               />
             </div>
           </div>
