@@ -13,6 +13,54 @@ This is a React-based web application for a motorcycle rental service called "Ap
 - **Form Management:** React Hook Form with Zod for validation
 - **Linting:** ESLint
 
+## Development
+
+To get started with the project, follow these steps:
+
+### 1. Installation
+
+Install the project dependencies using `yarn`:
+
+```bash
+yarn install
+```
+
+### 2. Running the Development Server
+
+To start the local development server, run:
+
+```bash
+yarn dev
+```
+
+The application will be available at `http://localhost:5173` (or the next available port).
+
+### 3. Building for Production
+
+To create a production-ready build of the application, run:
+
+```bash
+yarn build
+```
+
+The output will be generated in the `dist/` directory.
+
+### 4. Linting
+
+To check the code for any linting errors, run:
+
+```bash
+yarn lint
+```
+
+### 5. Previewing the Production Build
+
+To preview the production build locally, run:
+
+```bash
+yarn preview
+```
+
 ## Project Structure
 
 The project follows a standard React project structure:
