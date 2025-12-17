@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import motosJuntas from "@/assets/motos/motos-juntas.png";
+import motoqueiroEMotos from "@/assets/motos/motoqueiro-e-motos.png";
 import parceiros from "@/assets/parceiros.png";
 
 export function HeroSection() {
@@ -27,7 +27,7 @@ export function HeroSection() {
               {/* Right Side - Motorcycles */}
               <div className="relative flex items-center justify-center h-full">
                 <img 
-                  src={motosJuntas} 
+                  src={motoqueiroEMotos} 
                   alt="Motos" 
                   className="max-w-[550px] h-full object-contain drop-shadow-2xl animate-slide-in"
                 />
@@ -53,7 +53,7 @@ export function HeroSection() {
           <div className="container mx-auto px-4 flex justify-center items-center">
             <div className="flex justify-center items-center w-full max-w-lg">
               <img 
-                src={motosJuntas} 
+                src={motoqueiroEMotos} 
                 alt="Motos" 
                 className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
               />
