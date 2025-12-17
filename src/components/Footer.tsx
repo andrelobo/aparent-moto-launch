@@ -1,6 +1,6 @@
 import { useTheme } from "@/components/ThemeProvider";
-import logoBlack from "@/assets/logo-black.png";
-import logoWhite from "@/assets/logo-white.png";
+import logoPreto from "@/assets/logo-preto.png";
+import logoBranca from "@/assets/logo-branca.png";
 
 export function Footer() {
   const { theme } = useTheme();
@@ -12,7 +12,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo */}
           <img
-            src={isDark ? logoWhite : logoBlack}
+            src={isDark ? logoBranca : logoPreto}
             alt="ApaRent - Locadora de Motos"
             className="h-8 w-auto"
           />

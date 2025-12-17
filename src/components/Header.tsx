@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ThemeProvider";
-import logoBlack from "@/assets/logo-black.png";
-import logoWhite from "@/assets/logo-white.png";
+import logoPreto from "@/assets/logo-preto.png";
+import logoBranca from "@/assets/logo-branca.png";
 
 const navItems = [
   { label: "Aplicativo", href: "#" },
@@ -38,7 +38,7 @@ export function Header() {
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0">
             <img
-              src={isDark ? logoWhite : logoBlack}
+              src={isDark ? logoBranca : logoPreto}
               alt="ApaRent - Locadora de Motos"
               className="h-10 md:h-12 w-auto"
             />
