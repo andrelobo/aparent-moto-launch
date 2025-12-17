@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import motosJuntas from "@/assets/motos/motos-juntas.jpeg";
+import motosJuntas from "@/assets/motos/motos-juntas.png";
 import parceiros from "@/assets/parceiros.png";
 
 export function HeroSection() {
