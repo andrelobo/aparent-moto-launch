@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/ThemeProvider";
-import logoPreto from "@/assets/logo-preto.png";
-import logoBranca from "@/assets/logo-branca.png";
+import logoPreto from "@/assets/logofinalpreta.png";
+import logoBranca from "@/assets/logofinalbranca.png";
 
 const navItems = [
   { label: "Aplicativo", href: "#" },

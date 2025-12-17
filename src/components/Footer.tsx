@@ -1,6 +1,6 @@
 import { useTheme } from "@/components/ThemeProvider";
-import logoPreto from "@/assets/logo-preto.png";
-import logoBranca from "@/assets/logo-branca.png";
+import logoPreto from "@/assets/logofinalpreta.png";
+import logoBranca from "@/assets/logofinalbranca.png";
 
 export function Footer() {
   const { theme } = useTheme();
