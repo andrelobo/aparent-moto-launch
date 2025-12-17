@@ -5,7 +5,7 @@ export function WhatsAppWidget() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-40 right-6 z-50">
       {/* Chat Popup */}
       {isOpen && (
         <div className="absolute bottom-16 right-0 w-72 bg-background rounded-xl shadow-2xl border border-border overflow-hidden animate-slide-in">
