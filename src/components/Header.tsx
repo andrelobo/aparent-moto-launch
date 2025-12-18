@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Moon, Sun, MessageCircle } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react"; // Removed Moon, Sun
 import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/ThemeProvider";
-import logoPreto from "@/assets/logofinalpreta.png";
+// Removed import { useTheme } from "@/components/ThemeProvider";
+import logoPreto from "@/assets/logofinalpreta.png"; // Kept for consistency, but will always use logoBranca
 import logoBranca from "@/assets/logofinalbranca.png";
 
 const navItems = [
@@ -12,13 +12,9 @@ const navItems = [
 ];
 
 export function Header() {
-  const { theme, setTheme } = useTheme();
-
-  const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
-
-  const toggleTheme = () => {
-    setTheme(isDark ? "light" : "dark");
-  };
+  // Removed const { theme, setTheme } = useTheme();
+  // Removed const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
+  // Removed const toggleTheme = () => { setTheme(isDark ? "light" : "dark"); };
 
   const scrollToSection = (href: string) => {
     // For links with href="#", prevent default scroll behavior
@@ -38,7 +34,7 @@ export function Header() {
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0">
             <img
-              src={isDark ? logoBranca : logoPreto}
+              src={logoBranca} // Always use white logo for dark theme
               alt="ApaRent - Locadora de Motos"
               className="h-10 md:h-12 w-auto"
             />
@@ -59,14 +55,7 @@ export function Header() {
 
           {/* Actions */}
           <div className="flex items-center gap-2 md:gap-4">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleTheme}
-              className="rounded-full"
-            >
-              {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
-            </Button>
+            {/* Removed Button for theme toggle */}
 
             <a
               href="https://wa.me/5592999999999"

@@ -1,6 +1,13 @@
 import { Check, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+  Autoplay, // Import Autoplay
+} from "@/components/ui/carousel";
 
 const baseFeatures = [
   "IPVA incluso",
@@ -13,25 +20,26 @@ const baseFeatures = [
 const plans = [
   {
     name: "Plano Start 48",
-    price: "R$ 300",
-    period: "/semana",
+    weeklyPrice: 300,
     highlight: false,
   },
   {
     name: "Plano Pro 42",
-    price: "R$ 325",
-    period: "/semana",
+    weeklyPrice: 325,
     highlight: true,
   },
   {
     name: "Plano Premium 36",
-    price: "R$ 350",
-    period: "/semana",
+    weeklyPrice: 350,
     highlight: false,
   },
 ];
 
 export function PricingSection() {
+  const autoplayPlugin = [
+    Autoplay({ delay: 3000, stopOnInteraction: false }),
+  ];
+
   return (
     <section id="planos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
@@ -56,7 +64,7 @@ export function PricingSection() {
           </div>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
@@ -79,15 +87,72 @@ export function PricingSection() {
               </CardHeader>
               <CardContent className="text-center pb-6">
                 <div className="mb-6">
-                  <span className="text-4xl font-display font-bold text-foreground">
-                    {plan.price}
-                  </span>
-                  <span className="text-muted-foreground">{plan.period}</span>
+                  <div className="text-4xl font-display text-foreground">
+                    <span>R$ {plan.weeklyPrice * 4}</span>
+                    <span className="text-muted-foreground text-base"> /mês</span>
+                  </div>
+                  <div className="text-lg text-foreground font-extrabold mt-1">
+                    <span>R$ {plan.weeklyPrice}</span>
+                    <span className="text-foreground text-sm"> /semana</span>
+                  </div>
                 </div>
               </CardContent>
 
             </Card>
           ))}
+        </div>
+
+        <div className="md:hidden w-full">
+        <Carousel
+            opts={{
+              align: "start",
+              startIndex: 1, // Start with "Plano Pro 42"
+            }}
+            plugins={autoplayPlugin}
+            className="w-full max-w-xs mx-auto"
+          >
+            <CarouselContent>
+              {plans.map((plan, index) => (
+                <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card
+                      className={`h-full relative overflow-hidden transition-all ${
+                        plan.highlight
+                          ? "border-foreground shadow-xl"
+                          : "border-border"
+                      }`}
+                    >
+                      {plan.highlight && (
+                        <div className="absolute top-0 right-0 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
+                          <Star className="h-3 w-3 fill-current" />
+                          Mais popular
+                        </div>
+                      )}
+                      <CardHeader className="text-center pb-4">
+                        <h3 className="font-display font-bold text-xl text-foreground">
+                          {plan.name}
+                        </h3>
+                      </CardHeader>
+                      <CardContent className="text-center pb-6">
+                        <div className="mb-6">
+                          <div className="text-4xl font-display text-foreground">
+                            <span>R$ {plan.weeklyPrice * 4}</span>
+                            <span className="text-muted-foreground text-base"> /mês</span>
+                          </div>
+                          <div className="text-lg text-foreground font-extrabold mt-1">
+                            <span>R$ {plan.weeklyPrice}</span>
+                            <span className="text-foreground text-sm"> /semana</span>
+                          </div>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         <p className="text-center text-muted-foreground text-sm mt-8">

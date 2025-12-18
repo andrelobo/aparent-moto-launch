@@ -104,6 +104,22 @@ The application uses TanStack Query (React Query) for managing server state (dat
 
 The project uses ESLint for linting. The configuration is in `eslint.config.js`.
 
+## Proposed Feature: Gemini-powered Chatbot
+
+To enhance user engagement and provide instant support, we propose the integration of a Gemini-powered chatbot.
+
+### Overview
+
+The chatbot will be available as a floating widget on the website. Users can interact with it to get answers to frequently asked questions, inquire about motorcycle availability, and get assistance with the rental process.
+
+### Technical Implementation
+
+-   **Frontend:** A new chat component will be built using React and TypeScript. It will be styled with Tailwind CSS to match the existing design.
+-   **Backend:** A backend service will be created (e.g., using Node.js or Python) to handle communication with the Gemini API. This service will be responsible for sending user messages to the Gemini model and returning the responses. The Python snippets provided during our initial setup could be used as a reference for this backend service.
+-   **API:** The frontend will communicate with the backend via a REST API.
+
+This feature will improve the user experience by providing a 24/7 support channel and making information more accessible.
+
 ## Recent Changes (HeroSection.tsx)
 
 The `HeroSection.tsx` component has undergone several layout and styling adjustments to meet specific visual requirements:

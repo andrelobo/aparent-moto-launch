@@ -1,48 +1,28 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
-type Theme = "dark" | "light" | "system";
+type Theme = "dark"; // Only dark theme
 
 type ThemeProviderContextProps = {
   theme: Theme;
-  setTheme: (theme: Theme) => void;
 };
 
 const ThemeProviderContext = createContext<ThemeProviderContextProps | undefined>(undefined);
 
 export function ThemeProvider({
   children,
-  defaultTheme = "system",
-  storageKey = "aparent-theme",
 }: {
   children: React.ReactNode;
-  defaultTheme?: Theme;
-  storageKey?: string;
 }) {
-  const [theme, setTheme] = useState<Theme>(
-    () => (localStorage.getItem(storageKey) as Theme) || defaultTheme
-  );
+  const [theme, setTheme] = useState<Theme>("dark"); // Hardcode to dark
 
   useEffect(() => {
     const root = window.document.documentElement;
-    root.classList.remove("light", "dark");
-
-    if (theme === "system") {
-      const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-      root.classList.add(systemTheme);
-      return;
-    }
-
-    root.classList.add(theme);
-  }, [theme]);
+    root.classList.remove("light", "dark"); // Ensure light is removed if present
+    root.classList.add("dark"); // Always apply dark theme
+  }, []); // Empty dependency array, runs once
 
   const value = {
     theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
   };
 
   return (

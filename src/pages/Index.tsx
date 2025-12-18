@@ -2,8 +2,8 @@ import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
 import { PricingSection } from "@/components/PricingSection";
 import { Footer } from "@/components/Footer";
-import { WhatsAppWidget } from "@/components/WhatsAppWidget";
-import { InstagramWidget } from "@/components/InstagramWidget";
+// Removed import { WhatsAppWidget } from "@/components/WhatsAppWidget";
+// Removed import { InstagramWidget } from "@/components/InstagramWidget";
 
 const Index = () => {
   return (
@@ -14,8 +14,8 @@ const Index = () => {
         <PricingSection />
       </main>
       <Footer />
-      <WhatsAppWidget />
-      <InstagramWidget />
+      {/* Removed <WhatsAppWidget /> */}
+      {/* Removed <InstagramWidget /> */}
     </div>
   );
 };
