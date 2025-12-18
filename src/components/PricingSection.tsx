@@ -14,34 +14,19 @@ const plans = [
   {
     name: "Plano Start 48",
     price: "R$ 300",
-    period: "/mês",
-    description: "Ideal para começar com flexibilidade e suporte essencial.",
-    features: [
-      "Suporte via WhatsApp",
-    ],
+    period: "/semana",
     highlight: false,
   },
   {
     name: "Plano Pro 42",
     price: "R$ 325",
-    period: "/mês",
-    description: "O plano mais popular, com benefícios adicionais para sua jornada.",
-    features: [
-      "Suporte 24h prioritário",
-      "Desconto progressivo por tempo",
-    ],
+    period: "/semana",
     highlight: true,
   },
   {
     name: "Plano Premium 36",
     price: "R$ 350",
-    period: "/mês",
-    description: "Experiência completa com o máximo de vantagens e exclusividade.",
-    features: [
-      "Suporte 24h prioritário",
-      "Maior desconto garantido (25%)",
-      "Prioridade máxima na troca de moto",
-    ],
+    period: "/semana",
     highlight: false,
   },
 ];
@@ -51,14 +36,15 @@ export function PricingSection() {
     <section id="planos" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <span className="text-muted-foreground font-medium uppercase tracking-wider text-sm">
-            Planos e Preços
-          </span>
+          
           <p className="text-lg font-semibold text-primary mt-4 mb-4">
-            ZERO BUROCRACIA e sem ANÁLISE DE CRÉDITO
+            ZERO BUROCRACIA 
+          </p>
+          <p className="text-lg font-semibold text-primary mt-4 mb-4">
+            SEM ANÁLISE DE CRÉDITO
           </p>
           <p className="text-muted-foreground text-sm mt-2">
-            MOTO HONDA START 2026 disponível para todos os planos.
+            MOTO HONDA START 2026 
           </p>
           <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
             {baseFeatures.map((feature, index) => (
@@ -90,9 +76,6 @@ export function PricingSection() {
                 <h3 className="font-display font-bold text-xl text-foreground">
                   {plan.name}
                 </h3>
-                <p className="text-muted-foreground text-sm mt-1">
-                  {plan.description}
-                </p>
               </CardHeader>
               <CardContent className="text-center pb-6">
                 <div className="mb-6">
@@ -101,14 +84,6 @@ export function PricingSection() {
                   </span>
                   <span className="text-muted-foreground">{plan.period}</span>
                 </div>
-                <ul className="space-y-3 text-left">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-center gap-2 text-sm">
-                      <Check className="h-4 w-4 text-whatsapp flex-shrink-0" />
-                      <span className="text-foreground">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
               </CardContent>
               <CardFooter>
                 <a
