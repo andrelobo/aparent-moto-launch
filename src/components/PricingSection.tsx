@@ -1,4 +1,4 @@
-import { Check, MessageCircle, Star } from "lucide-react";
+import { Check, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 
@@ -85,26 +85,7 @@ export function PricingSection() {
                   <span className="text-muted-foreground">{plan.period}</span>
                 </div>
               </CardContent>
-              <CardFooter>
-                <a
-                  href={`https://wa.me/5592999999999?text=Olá! Tenho interesse no ${plan.name}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full"
-                >
-                  <Button
-                    className={`w-full gap-2 ${
-                      plan.highlight
-                        ? "bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground"
-                        : ""
-                    }`}
-                    variant={plan.highlight ? "default" : "outline"}
-                  >
-                    <MessageCircle className="h-4 w-4" />
-                    Quero esse plano
-                  </Button>
-                </a>
-              </CardFooter>
+
             </Card>
           ))}
         </div>
