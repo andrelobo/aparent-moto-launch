@@ -18,7 +18,7 @@ export function HeroSection() {
                 Alugue sua moto.
               </h1>
               <div className="flex justify-start">
-                <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[336px]" />
+                <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[189px]" />
               </div>
             </div>
 
@@ -45,7 +45,7 @@ export function HeroSection() {
               Alugue sua moto.
             </h1>
             <div className="flex flex-col sm:flex-row gap-3 justify-start mb-8">
-              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[180px]" />
+              <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[101px]" />
             </div>
           </div>
 
@@ -54,13 +54,14 @@ export function HeroSection() {
             <div className="flex justify-center items-center w-full max-w-lg">
               <img 
                 src={motoqueiroEMotos} 
-                alt="Motos" 
-                className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
-              />
+                  alt="Motos" 
+                  className="w-full h-full object-contain drop-shadow-lg animate-slide-in"
+                />
+              </div>
             </div>
           </div>
         </div>
-      </div>
     </section>
   );
 }
+
