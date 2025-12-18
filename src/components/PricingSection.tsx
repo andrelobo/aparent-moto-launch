@@ -2,46 +2,45 @@ import { Check, MessageCircle, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
 
+const baseFeatures = [
+  "IPVA incluso",
+  "Rastreamento",
+  "Seguro",
+  "Manutenção Preventiva",
+  "Moto Substituta",
+];
+
 const plans = [
   {
-    name: "Plano Semanal",
-    price: "R$ 180",
-    period: "/semana",
-    description: "Ideal para quem quer testar antes de fechar",
+    name: "Plano Start 48",
+    price: "R$ 300",
+    period: "/mês",
+    description: "Ideal para começar com flexibilidade e suporte essencial.",
     features: [
-      "Moto revisada",
-      "Documentação inclusa",
-      "Suporte WhatsApp",
-      "Retirada no mesmo dia",
+      "Suporte via WhatsApp",
     ],
     highlight: false,
   },
   {
-    name: "Plano Mensal",
-    price: "R$ 600",
+    name: "Plano Pro 42",
+    price: "R$ 325",
     period: "/mês",
-    description: "O mais escolhido pelos nossos clientes",
+    description: "O plano mais popular, com benefícios adicionais para sua jornada.",
     features: [
-      "Moto revisada",
-      "Documentação inclusa",
-      "Manutenção inclusa",
-      "Suporte 24h",
-      "Desconto progressivo",
+      "Suporte 24h prioritário",
+      "Desconto progressivo por tempo",
     ],
     highlight: true,
   },
   {
-    name: "Plano Trimestral",
-    price: "R$ 500",
+    name: "Plano Premium 36",
+    price: "R$ 350",
     period: "/mês",
-    description: "Melhor custo-benefício para uso contínuo",
+    description: "Experiência completa com o máximo de vantagens e exclusividade.",
     features: [
-      "Moto revisada",
-      "Documentação inclusa",
-      "Manutenção inclusa",
-      "Suporte 24h",
-      "Desconto de 17%",
-      "Prioridade na troca",
+      "Suporte 24h prioritário",
+      "Maior desconto garantido (25%)",
+      "Prioridade máxima na troca de moto",
     ],
     highlight: false,
   },
@@ -55,12 +54,20 @@ export function PricingSection() {
           <span className="text-muted-foreground font-medium uppercase tracking-wider text-sm">
             Planos e Preços
           </span>
-          <h2 className="text-3xl md:text-4xl font-display font-bold text-foreground mt-2 mb-4">
-            Escolha o plano ideal para você
-          </h2>
-          <p className="text-muted-foreground text-lg">
-            Valores transparentes e sem surpresas. Todos os planos incluem IPVA e licenciamento.
+          <p className="text-lg font-semibold text-primary mt-4 mb-4">
+            ZERO BUROCRACIA e sem ANÁLISE DE CRÉDITO
           </p>
+          <p className="text-muted-foreground text-sm mt-2">
+            MOTO HONDA START 2026 disponível para todos os planos.
+          </p>
+          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
+            {baseFeatures.map((feature, index) => (
+              <span key={index} className="flex items-center gap-1">
+                <Check className="h-4 w-4 text-whatsapp flex-shrink-0" />
+                {feature}
+              </span>
+            ))}
+          </div>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
