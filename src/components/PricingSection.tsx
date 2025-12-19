@@ -41,30 +41,13 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="planos" className="py-20 bg-background">
+    <section id="planos" className="pt-0 pb-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-12">
+        <div className="text-center max-w-2xl mx-auto mb-12">          
           
-          <p className="text-lg font-semibold text-primary mt-4 mb-4">
-            ZERO BUROCRACIA 
-          </p>
-          <p className="text-lg font-semibold text-primary mt-4 mb-4">
-            SEM ANÁLISE DE CRÉDITO
-          </p>
-          <p className="text-muted-foreground text-sm mt-2">
-            MOTO HONDA START 2026 
-          </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
-            {baseFeatures.map((feature, index) => (
-              <span key={index} className="flex items-center gap-1">
-                <Check className="h-4 w-4 text-whatsapp flex-shrink-0" />
-                {feature}
-              </span>
-            ))}
-          </div>
         </div>
 
-        <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="hidden md:grid md::grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
@@ -87,13 +70,13 @@ export function PricingSection() {
               </CardHeader>
               <CardContent className="text-center pb-6">
                 <div className="mb-6">
-                  <div className="text-4xl font-display text-foreground">
-                    <span>R$ {plan.weeklyPrice * 4}</span>
-                    <span className="text-muted-foreground text-base"> /mês</span>
-                  </div>
-                  <div className="text-lg text-foreground font-extrabold mt-1">
+                  <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
                     <span>R$ {plan.weeklyPrice}</span>
-                    <span className="text-foreground text-sm"> /semana</span>
+                    <span className="text-foreground text-base"> /semana</span>
+                  </div>
+                  <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
+                    <span>R$ {plan.weeklyPrice * 4}</span>
+                    <span className="text-muted-foreground text-sm"> /mês</span>
                   </div>
                 </div>
               </CardContent>
@@ -135,13 +118,13 @@ export function PricingSection() {
                       </CardHeader>
                       <CardContent className="text-center pb-6">
                         <div className="mb-6">
-                          <div className="text-4xl font-display text-foreground">
-                            <span>R$ {plan.weeklyPrice * 4}</span>
-                            <span className="text-muted-foreground text-base"> /mês</span>
-                          </div>
-                          <div className="text-lg text-foreground font-extrabold mt-1">
+                          <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
                             <span>R$ {plan.weeklyPrice}</span>
-                            <span className="text-foreground text-sm"> /semana</span>
+                            <span className="text-foreground text-base"> /semana</span>
+                          </div>
+                          <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
+                            <span>R$ {plan.weeklyPrice * 4}</span>
+                            <span className="text-muted-foreground text-sm"> /mês</span>
                           </div>
                         </div>
                       </CardContent>
@@ -153,6 +136,16 @@ export function PricingSection() {
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
+        </div>
+
+        {/* Moved div below carousel */}
+        <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
+          {baseFeatures.map((feature, index) => (
+            <span key={index} className="flex items-center gap-1">
+              <Check className="h-4 w-4 text-whatsapp flex-shrink-0" />
+              {feature}
+            </span>
+          ))}
         </div>
 
         <p className="text-center text-muted-foreground text-sm mt-8">
