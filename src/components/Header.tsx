@@ -2,8 +2,7 @@ import { useState } from "react";
 import { Menu, X, MessageCircle } from "lucide-react"; // Removed Moon, Sun
 import { Button } from "@/components/ui/button";
 // Removed import { useTheme } from "@/components/ThemeProvider";
-import logoPreto from "@/assets/logofinalpreta.png"; // Kept for consistency, but will always use logoBranca
-import logoBranca from "@/assets/logofinalbranca.png";
+import logoNatalina from "@/assets/logo_natalina.png";
 
 const navItems = [
   { label: "Aplicativo", href: "#" },
@@ -34,7 +33,7 @@ export function Header() {
           {/* Logo */}
           <a href="#inicio" className="flex-shrink-0">
             <img
-              src={logoBranca} // Always use white logo for dark theme
+              src={logoNatalina} // Always use white logo for dark theme
               alt="ApaRent - Locadora de Motos"
               className="h-10 md:h-12 w-auto"
             />

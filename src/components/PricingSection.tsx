@@ -47,7 +47,7 @@ export function PricingSection() {
           
         </div>
 
-        <div className="hidden md:grid md::grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <Card
               key={index}
