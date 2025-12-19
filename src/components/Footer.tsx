@@ -18,7 +18,7 @@ export function Footer() {
 
           {/* Copyright */}
           <p className="text-muted-foreground text-xs">
-            @2025 - Desenvolvido com ❤ por Na Tora Agência Digital
+            @2025 - Desenvolvido com <span className="text-red-500">❤</span> por Na Tora Agência Digital
           </p>
         </div>
       </div>

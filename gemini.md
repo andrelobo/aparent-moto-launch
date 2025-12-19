@@ -12,6 +12,7 @@ This is a React-based web application for a motorcycle rental service called "Ap
 - **Data Fetching:** TanStack Query (React Query)
 - **Form Management:** React Hook Form with Zod for validation
 - **Linting:** ESLint
+- **Package Manager:** The project uses `yarn` for package management, but also includes a `bun.lockb` file, suggesting that `bun` can also be used.
 
 ## Development
 
@@ -19,10 +20,12 @@ To get started with the project, follow these steps:
 
 ### 1. Installation
 
-Install the project dependencies using `yarn`:
+Install the project dependencies using `yarn` or `bun`:
 
 ```bash
 yarn install
+# or
+bun install
 ```
 
 ### 2. Running the Development Server
@@ -31,9 +34,11 @@ To start the local development server, run:
 
 ```bash
 yarn dev
+# or
+bun dev
 ```
 
-The application will be available at `http://localhost:5173` (or the next available port).
+The application will be available at `http://localhost:8080` (or the next available port).
 
 ### 3. Building for Production
 
@@ -41,6 +46,8 @@ To create a production-ready build of the application, run:
 
 ```bash
 yarn build
+# or
+bun build
 ```
 
 The output will be generated in the `dist/` directory.
@@ -51,6 +58,8 @@ To check the code for any linting errors, run:
 
 ```bash
 yarn lint
+# or
+bun lint
 ```
 
 ### 5. Previewing the Production Build
@@ -59,6 +68,8 @@ To preview the production build locally, run:
 
 ```bash
 yarn preview
+# or
+bun preview
 ```
 
 ## Project Structure
@@ -82,8 +93,8 @@ The project follows a standard React project structure:
 - `components/HeroSection.tsx`: The hero section of the application.
 - `components/PricingSection.tsx`: The section that displays the pricing plans.
 - `components/Footer.tsx`: The footer of the application.
-- `components/WhatsAppWidget.tsx`: A floating WhatsApp widget.
-- `components/InstagramWidget.tsx`: A floating Instagram widget.
+- `components/WhatsAppWidget.tsx`: A floating WhatsApp widget (currently disabled).
+- `components/InstagramWidget.tsx`: A floating Instagram widget (currently disabled).
 
 ## Styling
 
@@ -104,38 +115,27 @@ The application uses TanStack Query (React Query) for managing server state (dat
 
 The project uses ESLint for linting. The configuration is in `eslint.config.js`.
 
-## Proposed Feature: Gemini-powered Chatbot
+## Proposed Feature: Gemini-powered Chatbot for "Aparent Moto"
 
-To enhance user engagement and provide instant support, we propose the integration of a Gemini-powered chatbot.
+To enhance user engagement and provide instant support, we propose the integration of a Gemini-powered chatbot specifically tailored for "Aparent Moto".
 
 ### Overview
 
-The chatbot will be available as a floating widget on the website. Users can interact with it to get answers to frequently asked questions, inquire about motorcycle availability, and get assistance with the rental process.
+The chatbot will be available as a floating widget on the website. Users can interact with it to:
+
+- Get answers to frequently asked questions (e.g., "What are the rental requirements?", "What is the price for a 3-day rental?").
+- Inquire about motorcycle availability for specific dates.
+- Get assistance with the rental process, including a step-by-step guide.
+- Receive recommendations for motorcycle models based on their needs (e.g., "I'm looking for a bike for city commuting").
 
 ### Technical Implementation
 
--   **Frontend:** A new chat component will be built using React and TypeScript. It will be styled with Tailwind CSS to match the existing design.
--   **Backend:** A backend service will be created (e.g., using Node.js or Python) to handle communication with the Gemini API. This service will be responsible for sending user messages to the Gemini model and returning the responses. The Python snippets provided during our initial setup could be used as a reference for this backend service.
--   **API:** The frontend will communicate with the backend via a REST API.
+-   **Frontend:** A new chat component will be built using React and TypeScript. It will be styled with Tailwind CSS to match the existing design of the "Aparent Moto" website. The chat history will be maintained using local storage.
+-   **Backend:** A backend service will be created (e.g., using Node.js with Express or Python with FastAPI) to handle communication with the Gemini API. This service will be responsible for:
+    -   Receiving user messages from the frontend.
+    -   Formatting the messages and sending them to the Gemini API.
+    -   Receiving the responses from the Gemini API.
+    -   Sending the responses back to the frontend.
+-   **API:** The frontend will communicate with the backend via a REST API. The API will have endpoints for sending and receiving messages.
 
-This feature will improve the user experience by providing a 24/7 support channel and making information more accessible.
-
-## Recent Changes (HeroSection.tsx)
-
-The `HeroSection.tsx` component has undergone several layout and styling adjustments to meet specific visual requirements:
-
--   **Motorcycle Image Sizing:**
-    -   **Desktop:** The motorcycle images have been resized multiple times to achieve the desired visual balance. The final size is controlled by `max-w-[340px]` on each image and a container height of `h-[340px] xl:h-[395px]`.
-    -   **Mobile:** The `honda-start-vermelha.png` and `honda-titan-cinza.png` images have been scaled up using `scale-125` to visually match the `honda-fan-azul.png`.
-
--   **Motorcycle Image Positioning:**
-    -   **Desktop:** The images are now vertically aligned to the bottom of their container using the `items-end` class. The horizontal spacing between them has been reduced by changing `gap-4` to `gap-2`.
-
--   **"Ver motos" Button:**
-    -   The "Ver motos disponíveis" button has been made invisible across all viewports (desktop and mobile) by applying the `invisible` Tailwind CSS class. It remains in the DOM but is not rendered.
-
--   **Hero Text:**
-    -   The `whitespace-nowrap` class was removed from the main heading and paragraph to allow the text to wrap naturally on smaller screens, preventing overflow and text from being cut off.
-
--   **`hero-couple.png` Image:**
-    -   The size of the `hero-couple.png` image has been significantly increased on mobile viewports to `w-96 sm:w-[512px]` for better visual impact.
+This feature will improve the user experience by providing a 24/7 support channel, making information more accessible, and offering personalized recommendations.

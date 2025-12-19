@@ -41,7 +41,7 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="planos" className="pt-0 pb-20 bg-background">
+    <section id="planos" className="pt-[-6rem] pb-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center max-w-2xl mx-auto mb-12">          
           
@@ -58,7 +58,7 @@ export function PricingSection() {
               }`}
             >
               {plan.highlight && (
-                <div className="absolute top-0 right-0 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
+                <div className="absolute top-0 right-0 bg-golden-yellow text-black text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
                   <Star className="h-3 w-3 fill-current" />
                   Mais popular
                 </div>
@@ -71,15 +71,15 @@ export function PricingSection() {
               <CardContent className="text-center pb-6">
                 <div className="mb-6">
                   <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
-                    <span>R$ {plan.weeklyPrice}</span>
-                    <span className="text-foreground text-base"> /semana</span>
-                  </div>
-                  <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
-                    <span>R$ {plan.weeklyPrice * 4}</span>
-                    <span className="text-muted-foreground text-sm"> /mês</span>
-                  </div>
-                </div>
-              </CardContent>
+                            <span>R$ {plan.weeklyPrice}</span>
+                            <span className="text-foreground text-base"> /semana</span>
+                          </div>
+                          <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
+                            <span>R$ {plan.weeklyPrice * 4}</span>
+                            <span className="text-muted-foreground text-sm"> /mês</span>
+                          </div>
+                        </div>
+                      </CardContent>
 
             </Card>
           ))}
@@ -106,7 +106,7 @@ export function PricingSection() {
                       }`}
                     >
                       {plan.highlight && (
-                        <div className="absolute top-0 right-0 bg-foreground text-background text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
+                        <div className="absolute top-0 right-0 bg-golden-yellow text-black text-xs font-semibold px-3 py-1 rounded-bl-lg flex items-center gap-1">
                           <Star className="h-3 w-3 fill-current" />
                           Mais popular
                         </div>
@@ -147,10 +147,6 @@ export function PricingSection() {
             </span>
           ))}
         </div>
-
-        <p className="text-center text-muted-foreground text-sm mt-8">
-          * Valores sujeitos a alteração. Caução de segurança pode ser solicitado.
-        </p>
       </div>
     </section>
   );

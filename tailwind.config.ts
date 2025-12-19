@@ -65,6 +65,7 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
         whatsapp: "hsl(var(--whatsapp))",
+        "golden-yellow": "#FFD700",
         gray: {
           light: "hsl(var(--gray-light))",
           medium: "hsl(var(--gray-medium))",
