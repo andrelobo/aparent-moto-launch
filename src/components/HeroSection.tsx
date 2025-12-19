@@ -4,7 +4,7 @@ import parceiros from "@/assets/parceiros.png";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative bg-black pt-8 md:pt-10 pb-0 overflow-hidden">
+    <section id="inicio" className="relative bg-black pt-8 md:pt-14 pb-0 overflow-hidden">
       {/* Content Container */}
       <div className="relative z-10 flex flex-col">
         
