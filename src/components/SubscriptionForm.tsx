@@ -43,7 +43,7 @@ const FormSchema = z.object({
   }),
 });
 
-const SELLER_WHATSAPP_NUMBER = "5511999999999"; // Substitua pelo número do vendedor
+const SELLER_WHATSAPP_NUMBER = "5592985930954"; // Substitua pelo número do vendedor
 
 export function SubscriptionForm() {
   const [open, setOpen] = useState(false);
