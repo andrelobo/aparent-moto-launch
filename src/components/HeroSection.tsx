@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import motoqueiroEMotos from "@/assets/motos/motoqueiro-e-motos.png";
 import parceiros from "@/assets/parceiroscoloridos.png";
+import { SubscriptionForm } from "./SubscriptionForm";
 
 export function HeroSection() {
   return (
@@ -22,6 +23,9 @@ export function HeroSection() {
               <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
                 Alugue sua moto e comece hoje.
               </span>
+              <div className="mt-8">
+                <SubscriptionForm />
+              </div>
             </div>
 
             {/* Image Content Block */}
@@ -48,9 +52,12 @@ export function HeroSection() {
             <div className="flex flex-col sm:flex-row gap-3 justify-start my-4">
               <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[101px]" />
             </div>
-            <span className="text-lg sm:text-xl font-display text-white leading-tight animate-slide-in whitespace-nowrap">
+            <span className="text-2xl sm:text-3xl font-display font-bold text-white leading-tight animate-slide-in whitespace-nowrap">
               Alugue sua moto e comece hoje.
             </span>
+            <div className="mt-6">
+              <SubscriptionForm />
+            </div>
           </div>
 
           {/* Motorcycles Grid - Mobile */}
@@ -68,4 +75,3 @@ export function HeroSection() {
     </section>
   );
 }
-
