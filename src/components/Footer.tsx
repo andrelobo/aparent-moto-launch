@@ -16,11 +16,11 @@ export function Footer() {
             className="h-8 w-auto"
           />
 
-          {/* New Contact Info Block */}
-          <div className="flex flex-col justify-center items-center space-y-1 mt-4 text-muted-foreground text-xs">
-            <span>Apa Locadora Ltda</span>
-            <span>contato@apalocadora.com</span>
+          {/* Contact Information */}
+          <div className="flex flex-col md:flex-row gap-1 md:gap-4 text-muted-foreground text-xs text-center md:text-right">
             <span>92 98116-0563 / 99159-4210</span>
+            <span>contato@apalocadora.com</span>
+            <span>Apa Locadora Ltda</span>
           </div>
         </div>
       </div>
