@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import motoqueiroEMotos from "@/assets/motos/motoqueiro-e-motos.png";
-import parceiros from "@/assets/parceiros.png";
+import parceiros from "@/assets/parceiroscoloridos.png";
 
 export function HeroSection() {
   return (
@@ -13,13 +13,15 @@ export function HeroSection() {
           <div className="container mx-auto px-4">
             {/* Text Content Block */}
             <div className="text-left">
-              <h1 className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white mb-4 leading-tight">
-                Conquiste seus sonhos.<br />
-                Alugue sua moto.
-              </h1>
-              <div className="flex justify-start">
+              <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
+                Renda Extra ?
+              </span>
+              <div className="flex justify-start my-4">
                 <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[189px]" />
               </div>
+              <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
+                Alugue sua moto e comece hoje.
+              </span>
             </div>
 
             {/* Image Content Block */}
@@ -40,13 +42,15 @@ export function HeroSection() {
         <div className="flex lg:hidden flex-col flex-1">
           {/* Text Content */}
           <div className="container mx-auto px-4 pt-8 text-left">
-            <h1 className="text-3xl sm:text-4xl font-display font-bold text-white mb-4 leading-tight animate-slide-in">
-              Conquiste seus sonhos.<br />
-              Alugue sua moto.
-            </h1>
-            <div className="flex flex-col sm:flex-row gap-3 justify-start mb-8">
+            <span className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight animate-slide-in">
+              Renda Extra ?
+            </span>
+            <div className="flex flex-col sm:flex-row gap-3 justify-start my-4">
               <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[101px]" />
             </div>
+            <span className="text-lg sm:text-xl font-display text-white leading-tight animate-slide-in whitespace-nowrap">
+              Alugue sua moto e comece hoje.
+            </span>
           </div>
 
           {/* Motorcycles Grid - Mobile */}

@@ -12,7 +12,7 @@ This is a React-based web application for a motorcycle rental service called "Ap
 - **Data Fetching:** TanStack Query (React Query)
 - **Form Management:** React Hook Form with Zod for validation
 - **Linting:** ESLint
-- **Package Manager:** The project uses `yarn` for package management, but also includes a `bun.lockb` file, suggesting that `bun` can also be used.
+- **Package Manager:** The project primarily uses `yarn` for package management. While a `bun.lockb` file is present, `yarn` is the recommended and primary tool.
 
 ## Development
 
