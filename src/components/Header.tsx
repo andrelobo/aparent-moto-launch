@@ -45,7 +45,7 @@ export function Header() {
               <button
                 key={item.label} // Changed key to item.label as href is now always "#"
                 onClick={() => scrollToSection(item.href)}
-                className="text-[8px] md:text-base font-medium text-black dark:text-white hover:opacity-80 transition-opacity"
+                className="text-sm md:text-lg font-medium text-black dark:text-white hover:opacity-80 transition-opacity"
               >
                 {item.label}
               </button>

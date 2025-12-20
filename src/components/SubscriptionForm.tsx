@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { MessageCircle } from "lucide-react"; // Importar o ícone do WhatsApp
 
 import { Button } from "@/components/ui/button";
 import {
@@ -14,8 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
-}
-from "@/components/ui/dialog";
+} from "@/components/ui/dialog";
 import {
   Form,
   FormControl,
@@ -43,7 +41,7 @@ const FormSchema = z.object({
   }),
 });
 
-const SELLER_WHATSAPP_NUMBER = "92991594210"; // Substitua pelo número do vendedor
+const SELLER_WHATSAPP_NUMBER = "5511999999999"; // Substitua pelo número do vendedor
 
 export function SubscriptionForm() {
   const [open, setOpen] = useState(false);
@@ -57,7 +55,7 @@ export function SubscriptionForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    const message = `Olá! Me chamo ${data.name}, meu zap é ${data.whatsapp}, e o plano que quero saber mais é o ${data.plan}. Mensagem enviada do site aparentlovadora.com.br`;
+    const message = `Olá! Me chamo ${data.name}, meu zap é ${data.whatsapp}, e o plano que quero saber mais é o ${data.plan}, ok?`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${SELLER_WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
@@ -69,9 +67,7 @@ export function SubscriptionForm() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button className="bg-green-500 hover:bg-green-600 text-white flex items-center gap-2">
-          <MessageCircle className="h-5 w-5" /> Saiba Mais
-        </Button>
+        <Button variant="outline">Quero Saber Mais</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

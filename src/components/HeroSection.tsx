@@ -14,10 +14,10 @@ export function HeroSection() {
           <div className="container mx-auto px-4">
             {/* Text Content Block */}
             <div className="text-left">
-              <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
+              <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight mb-4">
                 Renda Extra ?
               </span>
-              <div className="flex justify-start my-4">
+              <div className="flex justify-start mb-4">
                 <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[189px]" />
               </div>
               <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
@@ -46,13 +46,13 @@ export function HeroSection() {
         <div className="flex lg:hidden flex-col flex-1">
           {/* Text Content */}
           <div className="container mx-auto px-4 pt-8 text-left">
-            <span className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight animate-slide-in">
+            <span className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight animate-slide-in mb-4">
               Renda Extra ?
             </span>
-            <div className="flex flex-col sm:flex-row gap-3 justify-start my-4">
+            <div className="flex flex-col sm:flex-row gap-3 justify-start mb-4">
               <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[101px]" />
             </div>
-            <span className="text-2xl sm:text-3xl font-display font-bold text-white leading-tight animate-slide-in whitespace-nowrap">
+            <span className="text-lg sm:text-xl font-display text-white leading-tight animate-slide-in whitespace-nowrap">
               Alugue sua moto e comece hoje.
             </span>
             <div className="mt-6">
@@ -72,6 +72,7 @@ export function HeroSection() {
             </div>
           </div>
         </div>
+      </div>
     </section>
   );
 }

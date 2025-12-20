@@ -16,10 +16,12 @@ export function Footer() {
             className="h-8 w-auto"
           />
 
-          {/* Copyright */}
-          <p className="text-muted-foreground text-xs">
-            @2025 - Desenvolvido com <span className="text-red-500">❤</span> por Na Tora Agência Digital
-          </p>
+          {/* New Contact Info Block */}
+          <div className="flex flex-col justify-center items-center space-y-1 mt-4 text-muted-foreground text-xs">
+            <span>Apa Locadora Ltda</span>
+            <span>contato@apalocadora.com</span>
+            <span>92 98116-0563 / 99159-4210</span>
+          </div>
         </div>
       </div>
     </footer>
