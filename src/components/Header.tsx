@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, MessageCircle } from "lucide-react"; // Removed Moon, Sun
+import { Menu, X, MessageCircle, Instagram } from "lucide-react"; // Removed Moon, Sun, added Instagram
 import { Button } from "@/components/ui/button";
 // Removed import { useTheme } from "@/components/ThemeProvider";
 import logoNatalina from "@/assets/logo_natalina.png";
@@ -53,20 +53,24 @@ export function Header() {
           </nav>
 
           {/* Actions */}
-          <div className="flex items-center gap-2 md:gap-4">
-            {/* Removed Button for theme toggle */}
-
+          <div className="flex items-center gap-3">
             <a
               href="https://wa.me/5592999999999"
               target="_blank"
               rel="noopener noreferrer"
-              className="hidden sm:flex"
+              className="flex items-center justify-center h-6 w-6 sm:h-8 sm:w-8 rounded-full"
+              style={{ backgroundColor: '#25D366' }}
             >
-              <Button className="bg-whatsapp hover:bg-whatsapp/90 text-primary-foreground gap-2">
-                <MessageCircle className="h-4 w-4" />
-                <span className="hidden lg:inline">Alugue Agora</span>
-                <span className="lg:hidden">WhatsApp</span>
-              </Button>
+              <MessageCircle className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
+            </a>
+            <a
+              href="https://instagram.com/aparent.rent"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center justify-center h-6 w-6 sm:h-8 sm:w-8 rounded-full"
+              style={{ background: 'linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%)' }}
+            >
+              <Instagram className="h-4 w-4 sm:h-5 sm:w-5 text-white" />
             </a>
 
             {/* Mobile Menu Toggle */}
