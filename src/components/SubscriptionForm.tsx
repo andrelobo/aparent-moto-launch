@@ -43,7 +43,7 @@ const FormSchema = z.object({
   }),
 });
 
-const SELLER_WHATSAPP_NUMBER = "5592985930954"; // Substitua pelo número do vendedor
+const SELLER_WHATSAPP_NUMBER = "92991594210"; // Substitua pelo número do vendedor
 
 export function SubscriptionForm() {
   const [open, setOpen] = useState(false);
@@ -57,7 +57,7 @@ export function SubscriptionForm() {
   });
 
   function onSubmit(data: z.infer<typeof FormSchema>) {
-    const message = `Olá! Me chamo ${data.name}, meu zap é ${data.whatsapp}, e o plano que quero saber mais é o ${data.plan}, ok?`;
+    const message = `Olá! Me chamo ${data.name}, meu zap é ${data.whatsapp}, e o plano que quero saber mais é o ${data.plan}. Mensagem enviada do site aparentlovadora.com.br`;
     const encodedMessage = encodeURIComponent(message);
     const whatsappUrl = `https://wa.me/${SELLER_WHATSAPP_NUMBER}?text=${encodedMessage}`;
 
