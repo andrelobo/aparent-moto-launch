@@ -44,7 +44,7 @@ export function PricingSection() {
     <section id="planos" className="pt-[-6rem] pb-20 bg-background">
       <div className="container mx-auto px-4">
       <div className="max-w-7xl mx-auto mb-12 text-left">
-        <h2 className="text-3xl font-display text-foreground">Escolha seu Plano !</h2>
+        <h2 className="text-2xl font-display text-foreground">Escolha seu Plano !</h2>
       </div>
 
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
