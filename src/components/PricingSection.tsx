@@ -43,9 +43,9 @@ export function PricingSection() {
   return (
     <section id="planos" className="pt-[-6rem] pb-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center max-w-2xl mx-auto mb-12">          
-          
-        </div>
+      <div className="max-w-7xl mx-auto mb-12 text-left">
+        <h2 className="text-3xl font-display text-foreground">Escolha seu Plano !</h2>
+      </div>
 
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
@@ -63,18 +63,18 @@ export function PricingSection() {
                   Mais popular
                 </div>
               )}
-              <CardHeader className="text-center pb-4">
+              <CardHeader className="pt-4 pb-2 px-4">
                 <h3 className="font-display font-bold text-xl text-foreground">
                   {plan.name}
                 </h3>
               </CardHeader>
-              <CardContent className="text-center pb-6">
+              <CardContent className="pt-4 pb-4 px-4">
                 <div className="mb-6">
                   <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
                             <span>R$ {plan.weeklyPrice}</span>
                             <span className="text-foreground text-base"> /semana</span>
                           </div>
-                          <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
+                          <div className="text-lg text-muted-foreground mt-1 text-right"> {/* Monthly, not bold, smaller */}
                             <span>R$ {plan.weeklyPrice * 4}</span>
                             <span className="text-muted-foreground text-sm"> /mês</span>
                           </div>
@@ -111,18 +111,18 @@ export function PricingSection() {
                           Mais popular
                         </div>
                       )}
-                      <CardHeader className="text-center pb-4">
+                      <CardHeader className="pt-4 pb-2 px-4">
                         <h3 className="font-display font-bold text-xl text-foreground">
                           {plan.name}
                         </h3>
                       </CardHeader>
-                      <CardContent className="text-center pb-6">
+                      <CardContent className="pt-4 pb-4 px-4">
                         <div className="mb-6">
                           <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
                             <span>R$ {plan.weeklyPrice}</span>
                             <span className="text-foreground text-base"> /semana</span>
                           </div>
-                          <div className="text-lg text-muted-foreground mt-1"> {/* Monthly, not bold, smaller */}
+                          <div className="text-lg text-muted-foreground mt-1 text-right"> {/* Monthly, not bold, smaller */}
                             <span>R$ {plan.weeklyPrice * 4}</span>
                             <span className="text-muted-foreground text-sm"> /mês</span>
                           </div>
