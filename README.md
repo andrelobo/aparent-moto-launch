@@ -30,4 +30,4 @@ Para iniciar o servidor de desenvolvimento local, execute:
 yarn dev
 ```
 
-O aplicativo estará disponível em `http://localhost:5173` (ou na próxima porta disponível).
+O aplicativo estará disponível em `http://localhost:8080` (ou na próxima porta disponível).

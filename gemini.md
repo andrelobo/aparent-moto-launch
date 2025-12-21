@@ -12,7 +12,10 @@ This is a React-based web application for a motorcycle rental service called "Ap
 - **Data Fetching:** TanStack Query (React Query)
 - **Form Management:** React Hook Form with Zod for validation
 - **Linting:** ESLint
-- **Package Manager:** The project primarily uses `yarn` for package management. While a `bun.lockb` file is present, `yarn` is the recommended and primary tool.
+
+## Package Manager
+
+This project has been configured to work with both `yarn` and `bun`. You will find both `yarn.lock` and `bun.lockb` files in the repository. However, `yarn` is the recommended package manager for this project.
 
 ## Development
 
@@ -20,11 +23,15 @@ To get started with the project, follow these steps:
 
 ### 1. Installation
 
-Install the project dependencies using `yarn` or `bun`:
+Install the project dependencies using `yarn`:
 
 ```bash
 yarn install
-# or
+```
+
+Alternatively, you can use `bun`:
+
+```bash
 bun install
 ```
 
@@ -34,7 +41,11 @@ To start the local development server, run:
 
 ```bash
 yarn dev
-# or
+```
+
+Or with `bun`:
+
+```bash
 bun dev
 ```
 
@@ -46,7 +57,11 @@ To create a production-ready build of the application, run:
 
 ```bash
 yarn build
-# or
+```
+
+Or with `bun`:
+
+```bash
 bun build
 ```
 
@@ -58,7 +73,11 @@ To check the code for any linting errors, run:
 
 ```bash
 yarn lint
-# or
+```
+
+Or with `bun`:
+
+```bash
 bun lint
 ```
 
@@ -68,33 +87,46 @@ To preview the production build locally, run:
 
 ```bash
 yarn preview
-# or
+```
+
+Or with `bun`:
+
+```bash
 bun preview
 ```
 
-## Project Structure
+## File Structure
 
 The project follows a standard React project structure:
 
-- `src/`: Contains the main source code of the application.
-  - `assets/`: Static assets like images and icons.
-  - `components/`: Reusable UI components.
-    - `ui/`: shadcn/ui components.
-  - `hooks/`: Custom React hooks.
-  - `lib/`: Utility functions.
-  - `pages/`: Application pages.
-- `public/`: Static assets that are not processed by Vite.
+- **`public/`**: This directory contains static assets that are not processed by the build tool. These files are served directly by the web server.
+- **`src/`**: This directory contains the main source code of the application.
+  - **`assets/`**: This directory contains static assets like images, icons, and fonts that are imported into the application.
+  - **`components/`**: This directory contains reusable UI components that are used throughout the application.
+    - **`ui/`**: This subdirectory contains shadcn/ui components that have been customized for the project.
+  - **`hooks/`**: This directory contains custom React hooks that encapsulate reusable logic.
+  - **`lib/`**: This directory contains utility functions and libraries that are used across the application.
+  - **`pages/`**: This directory contains the main pages of the application. Each file in this directory represents a route.
+- **`App.tsx`**: This is the main application component that sets up routing, theme provider, and other global providers.
+- **`main.tsx`**: This is the entry point of the application. It renders the `App` component into the DOM.
 
 ## Key Components
 
-- `App.tsx`: The main application component that sets up routing, theme provider, and other global providers.
-- `pages/Index.tsx`: The main page of the application, which is composed of several sections.
-- `components/Header.tsx`: The header of the application.
-- `components/HeroSection.tsx`: The hero section of the application.
-- `components/PricingSection.tsx`: The section that displays the pricing plans.
-- `components/Footer.tsx`: The footer of the application.
-- `components/WhatsAppWidget.tsx`: A floating WhatsApp widget (currently disabled).
-- `components/InstagramWidget.tsx`: A floating Instagram widget (currently disabled).
+- **`App.tsx`**: The main application component that sets up routing, theme provider, and other global providers.
+- **`pages/Index.tsx`**: The main page of the application, which is composed of several sections.
+- **`components/Header.tsx`**: The header of the application, which contains the logo and navigation links.
+- **`components/HeroSection.tsx`**: The hero section of the application, which is the first thing users see.
+- **`components/AboutSection.tsx`**: This section provides a brief introduction to the company and its mission.
+- **`components/BenefitsSection.tsx`**: This section highlights the key benefits of renting a motorcycle from "Aparent Moto Launch".
+- **`components/FleetSection.tsx`**: This section showcases the available motorcycle models for rent.
+- **`components/HowItWorksSection.tsx`**: This section explains the motorcycle rental process in a clear and concise way.
+- **`components/PricingSection.tsx`**: This section displays the pricing plans for different rental durations.
+- **`components/TestimonialsSection.tsx`**: This section features testimonials from satisfied customers.
+- **`components/FAQSection.tsx`**: This section provides answers to frequently asked questions.
+- **`components/ContactSection.tsx`**: This section provides contact information and a contact form.
+- **`components/Footer.tsx`**: The footer of the application, which contains social media links and other useful information.
+- **`components/WhatsAppWidget.tsx`**: A floating WhatsApp widget that allows users to start a conversation with the company (currently disabled).
+- **`components/InstagramWidget.tsx`**: A floating Instagram widget that displays the company's latest Instagram posts (currently disabled).
 
 ## Styling
 

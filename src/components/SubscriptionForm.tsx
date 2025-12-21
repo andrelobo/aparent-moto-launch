@@ -67,7 +67,7 @@ export function SubscriptionForm() {
   return (
     <Dialog open={open} onOpenChange={setOpen}>
       <DialogTrigger asChild>
-        <Button variant="outline">Quero Saber Mais</Button>
+        <Button style={{ backgroundColor: '#25D366', color: 'white', transform: 'scale(0.75)' }}>Quero Saber Mais</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>

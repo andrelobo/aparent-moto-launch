@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import motoqueiroEMotos from "@/assets/motos/motoqueiro-e-motos.png";
 import parceiros from "@/assets/parceiroscoloridos.png";
-import { SubscriptionForm } from "./SubscriptionForm";
 
 export function HeroSection() {
   return (
@@ -27,9 +26,6 @@ export function HeroSection() {
                               Aluguel sua moto sem burocracia.
                             </span>
                           </div>
-              <div className="mt-8">
-                <SubscriptionForm />
-              </div>
             </div>
 
             {/* Image Content Block */}
@@ -62,9 +58,6 @@ export function HeroSection() {
               <span className="text-2xl sm:text-3xl font-display font-bold text-white leading-tight animate-slide-in whitespace-nowrap">
                   Aluguel sua moto sem burocracia.
               </span>
-            </div>
-            <div className="mt-6">
-              <SubscriptionForm />
             </div>
           </div>
 
