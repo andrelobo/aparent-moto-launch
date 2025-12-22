@@ -4,8 +4,10 @@ import parceiros from "@/assets/parceiroscoloridos.png";
 
 export function HeroSection() {
   return (
-    <section id="inicio" className="relative bg-black pt-8 md:pt-14 pb-0 overflow-hidden">
-      {/* Content Container */}
+
+    <section id="inicio" className="relative bg-black pt-4 md:pt-7 pb-0 overflow-hidden">
+
+    {/* Content Container */}
       <div className="relative z-10 flex flex-col">
         
         {/* Desktop Layout */}
@@ -17,9 +19,9 @@ export function HeroSection() {
                             <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[189px]" />
                           </div>
                           <div>
-                            <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
-                              Renda Extra ?
-                            </span>
+                            <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-yellow-400 leading-tight">
+  Renda Extra ?
+</span>
                           </div>
                           <div className="mt-2">
                             <span className="text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
@@ -50,8 +52,8 @@ export function HeroSection() {
               <img src={parceiros} alt="Nossos parceiros" className="w-full max-w-[101px]" />
             </div>
             <div>
-              <span className="text-3xl sm:text-4xl font-display font-bold text-white leading-tight animate-slide-in">
-                Renda Extra ?
+              <span className="text-3xl sm:text-4xl font-display font-bold text-yellow-400 leading-tight animate-slide-in">
+                Renda Extra?
               </span>
             </div>
             <div className="mt-2">
