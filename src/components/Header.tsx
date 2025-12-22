@@ -35,7 +35,7 @@ export function Header() {
             <img
               src={logoNatalina} // Always use white logo for dark theme
               alt="ApaRent - Locadora de Motos"
-              className="h-10 md:h-12 w-auto"
+              className="h-10 md:h-12 w-auto -translate-y-1"
             />
           </a>
 
