@@ -16,11 +16,11 @@ export function HeroSection() {
             
             {/* BLOCO TEXTO + PARCEIROS */}
             <div className="flex flex-col items-start">
-              <div className="my-4 ml-[-0.5rem]">
+              <div className="my-4 ml-[-1rem]">
                 <img
                   src={parceiros}
                   alt="Nossos parceiros"
-                  className="block max-w-[189px]"
+                  className="block max-w-[217px]"
                 />
               </div>
 
@@ -49,11 +49,11 @@ export function HeroSection() {
           <div className="w-full px-4 pt-8">
             
             <div className="flex flex-col items-start">
-              <div className="my-4 ml-[-0.5rem]">
+              <div className="my-4 ml-[-1rem]">
                 <img
                   src={parceiros}
                   alt="Nossos parceiros"
-                  className="block max-w-[101px]"
+                  className="block max-w-[116px]"
                 />
               </div>
 
