@@ -6,12 +6,12 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-  Autoplay, // Import Autoplay
+  Autoplay,
 } from "@/components/ui/carousel";
 import { SubscriptionTriggerButton } from "./SubscriptionTriggerButton";
 
 const baseFeatures = [
-  "IPVA inclusoo",
+  "IPVA incluso",
   "Rastreamento",
   "Seguro",
   "Manutenção Preventiva",
@@ -45,9 +45,10 @@ export function PricingSection() {
     <section id="planos" className="pt-[-6rem] pb-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="max-w-7xl mx-auto mb-12 flex justify-between items-center">
-          <h2 className="text-2xl font-display text-foreground">Escolha seu Plano !</h2>
+          <h2 className="text-2xl font-display text-foreground">Escolha seu Plano!</h2>
         </div>
 
+        {/* Desktop */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <Card
@@ -70,25 +71,25 @@ export function PricingSection() {
                 </h3>
               </CardHeader>
               <CardContent className="pt-4 pb-4 px-4">
+                {/* PREÇO CENTRALIZADO - OPÇÃO 2 */}
                 <div className="mb-6">
-                  <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
-                            <span>R$ {plan.weeklyPrice}</span>
-                            <span className="text-foreground text-base"> /semana</span>
-                          </div>
-                          <div className="text-lg text-muted-foreground mt-1 text-right"> {/* Monthly, not bold, smaller */}
-                            <span>R$ {plan.weeklyPrice * 4}</span>
-                            <span className="text-muted-foreground text-sm"> /mês</span>
-                          </div>
-                        </div>
-                        <SubscriptionTriggerButton plan={plan.name} />
-                      </CardContent>
-
+                  <div className="flex flex-col items-center">
+                    <div className="text-4xl font-display text-foreground font-extrabold">
+                      <span>R$ {plan.weeklyPrice}</span>
+                      <span className="text-foreground text-base"> /semana</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <SubscriptionTriggerButton plan={plan.name} />
+              </CardContent>
             </Card>
           ))}
         </div>
 
+        {/* Mobile Carousel */}
         <div className="md:hidden w-full">
-        <Carousel
+          <Carousel
             opts={{
               align: "start",
               startIndex: 1, // Start with "Plano Pro 42"
@@ -119,16 +120,16 @@ export function PricingSection() {
                         </h3>
                       </CardHeader>
                       <CardContent className="pt-4 pb-4 px-4">
+                        {/* PREÇO CENTRALIZADO - OPÇÃO 2 (MOBILE) */}
                         <div className="mb-6">
-                          <div className="text-4xl font-display text-foreground font-extrabold"> {/* Weekly, extrabold, large */}
-                            <span>R$ {plan.weeklyPrice}</span>
-                            <span className="text-foreground text-base"> /semana</span>
-                          </div>
-                          <div className="text-lg text-muted-foreground mt-1 text-right"> {/* Monthly, not bold, smaller */}
-                            <span>R$ {plan.weeklyPrice * 4}</span>
-                            <span className="text-muted-foreground text-sm"> /mês</span>
+                          <div className="flex flex-col items-center">
+                            <div className="text-4xl font-display text-foreground font-extrabold">
+                              <span>R$ {plan.weeklyPrice}</span>
+                              <span className="text-foreground text-base"> /semana</span>
+                            </div>
                           </div>
                         </div>
+                        
                         <SubscriptionTriggerButton plan={plan.name} />
                       </CardContent>
                     </Card>
@@ -141,7 +142,7 @@ export function PricingSection() {
           </Carousel>
         </div>
 
-        {/* Moved div below carousel */}
+        {/* Features List */}
         <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
           {baseFeatures.map((feature, index) => (
             <span key={index} className="flex items-center gap-1">
