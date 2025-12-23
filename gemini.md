@@ -124,6 +124,9 @@ The project follows a standard React project structure:
 - **`components/TestimonialsSection.tsx`**: This section features testimonials from satisfied customers.
 - **`components/FAQSection.tsx`**: This section provides answers to frequently asked questions.
 - **`components/ContactSection.tsx`**: This section provides contact information and a contact form.
+- **`components/NavLink.tsx`**: A component for navigation links.
+- **`components/SubscriptionForm.tsx`**: A form for users to subscribe to a newsletter.
+- **`components/ThemeProvider.tsx`**: A component for managing the application's theme.
 - **`components/Footer.tsx`**: The footer of the application, which contains social media links and other useful information.
 - **`components/WhatsAppWidget.tsx`**: A floating WhatsApp widget that allows users to start a conversation with the company (currently disabled).
 - **`components/InstagramWidget.tsx`**: A floating Instagram widget that displays the company's latest Instagram posts (currently disabled).

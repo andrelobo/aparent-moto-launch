@@ -16,7 +16,7 @@ export function HeroSection() {
             
             {/* BLOCO TEXTO + PARCEIROS */}
             <div className="flex flex-col items-start">
-              <div className="my-4 ml-[-1rem]">
+              <div className="mt-[26px] mb-4 ml-[-1rem]">
                 <img
                   src={parceiros}
                   alt="Nossos parceiros"
@@ -29,7 +29,7 @@ export function HeroSection() {
               </span>
 
               <span className="mt-2 text-4xl xl:text-5xl 2xl:text-6xl font-display font-bold text-white leading-tight">
-                Aluguel sua moto sem burocracia.
+                Alugue sua moto sem burocracia.
               </span>
             </div>
 
@@ -62,7 +62,7 @@ export function HeroSection() {
               </span>
 
               <span className="mt-2 text-2xl sm:text-3xl font-display font-bold text-white leading-tight animate-slide-in">
-                Aluguel sua moto sem burocracia.
+                Alugue sua moto sem burocracia.
               </span>
             </div>
           </div>

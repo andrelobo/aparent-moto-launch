@@ -6,7 +6,7 @@ export function Footer() {
   const isDark = theme === "dark" || (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
-    <footer className="bg-secondary py-6 border-t border-border">
+    <footer className="bg-secondary py-3 border-t border-border">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-4">
           {/* Logo */}
