@@ -42,13 +42,12 @@ export function PricingSection() {
   ];
 
   return (
-    <section id="planos" className="pt-[-6rem] pb-20 bg-background">
+    <section id="planos" className="pt-[-6rem] pb-8 bg-background">
       <div className="container mx-auto px-4">
-        <div className="max-w-7xl mx-auto mb-12 flex justify-between items-center">
-          <h2 className="text-2xl font-display text-foreground">Escolha seu Plano!</h2>
+        <div className="max-w-7xl mx-auto mb-4 flex justify-between items-center">
+          <h2 className="text-2xl font-display text-foreground">Escolha seu Plano !</h2>
         </div>
 
-        {/* Desktop */}
         <div className="hidden md:grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {plans.map((plan, index) => (
             <Card
@@ -65,14 +64,13 @@ export function PricingSection() {
                   Mais popular
                 </div>
               )}
-              <CardHeader className="pt-4 pb-2 px-4">
+              <CardHeader className="pt-2 pb-1 px-4">
                 <h3 className="font-display font-bold text-xl text-foreground">
                   {plan.name}
                 </h3>
               </CardHeader>
-              <CardContent className="pt-4 pb-4 px-4">
-                {/* PREÇO CENTRALIZADO - OPÇÃO 2 */}
-                <div className="mb-6">
+              <CardContent className="pt-2 pb-3 px-4">
+                <div className="mb-4">
                   <div className="flex flex-col items-center">
                     <div className="text-4xl font-display text-foreground font-extrabold">
                       <span>R$ {plan.weeklyPrice}</span>
@@ -87,7 +85,6 @@ export function PricingSection() {
           ))}
         </div>
 
-        {/* Mobile Carousel */}
         <div className="md:hidden w-full">
           <Carousel
             opts={{
@@ -114,14 +111,13 @@ export function PricingSection() {
                           Mais popular
                         </div>
                       )}
-                      <CardHeader className="pt-4 pb-2 px-4">
+                      <CardHeader className="pt-2 pb-1 px-4">
                         <h3 className="font-display font-bold text-xl text-foreground">
                           {plan.name}
                         </h3>
                       </CardHeader>
-                      <CardContent className="pt-4 pb-4 px-4">
-                        {/* PREÇO CENTRALIZADO - OPÇÃO 2 (MOBILE) */}
-                        <div className="mb-6">
+                      <CardContent className="pt-2 pb-3 px-4">
+                        <div className="mb-4">
                           <div className="flex flex-col items-center">
                             <div className="text-4xl font-display text-foreground font-extrabold">
                               <span>R$ {plan.weeklyPrice}</span>
@@ -142,8 +138,7 @@ export function PricingSection() {
           </Carousel>
         </div>
 
-        {/* Features List */}
-        <div className="mt-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
+        <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-foreground">
           {baseFeatures.map((feature, index) => (
             <span key={index} className="flex items-center gap-1">
               <Check className="h-4 w-4 text-whatsapp flex-shrink-0" />
